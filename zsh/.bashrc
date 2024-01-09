@@ -129,3 +129,6 @@ PS1='[\u@\h \W]\$ '
 #then
 #    exec fish
 #fi
+
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
