@@ -2,7 +2,7 @@
 sub-codepage = cp936
 slang = zh_CN,zho,chi,zh,zh_TW,eng,en,jpn,ja
 demuxer-readahead-secs = 20
-hwdec = vaapi
+hwdec = auto
 vo = gpu-next,
 # this will cause broken cover images
 # hwdec-codecs = all
@@ -10,7 +10,7 @@ vo = gpu-next,
 sub-ass-force-margins = yes
 # this takes a lot of CPU on the terminal
 # osd-fractions = yes
-osc = no
+#osc = no
 screenshot-format = webp
 
 scale = nearest

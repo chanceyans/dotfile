@@ -44,9 +44,9 @@ alias vim="nvim"
 
 # pacman aliases and functions
 function Syu(){
-    sudo pacsync pacman -Sy && sudo pacman -Su $@  && sync -f /
+    sudo pacman -Syu $@  && sync -f /
     pacman -Qtdq | ifne sudo pacman -Rcs - && sync -f /
-    sudo pacsync pacman -Fy && sync -f /
+    sudo pacman -Fy && sync -f /
     pacdiff -o
 }
 
@@ -132,3 +132,4 @@ PS1='[\u@\h \W]\$ '
 
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
+. "$HOME/.cargo/env"
